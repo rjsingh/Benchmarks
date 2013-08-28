@@ -1,0 +1,20 @@
+__kernel
+void simple_rag_op(__global float *a, __global int *dim1) {
+	int dim2_sizes[] = {20, 50, 100};
+	int gid = get_global_id(0);
+	int gis = get_global_size(0);
+			
+	int start = gid;
+	int rows = *n;
+	int cols = *n;
+	
+	for(int i = start; i < rows; i += gis) {
+		//get my dim2.
+		int dim2 = dim2_sizes[dim2[i%3]];
+		
+		for(int j = 0; j < dim2; j++) {
+			a[i * ]
+		}
+	}
+	
+}
